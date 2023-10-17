@@ -12,7 +12,7 @@ on:
 jobs:
 
   test:
-    runs-on: ${{ matrix.so }} 
+    runs-on: ubuntu-latest
     env:
       HOST: localhost
       PORT: 5432
@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.20']
-        so: ['ubuntu-latest', 'ubuntu-20.04']
+
     steps:
     - uses: actions/checkout@v3
 
